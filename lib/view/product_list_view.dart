@@ -1,9 +1,7 @@
-// carousel.dart
-import 'dart:math';
-import 'package:asdfg/screens/favourites_view.dart';
+import 'package:asdfg/control/product_controller.dart';
+import 'package:asdfg/view/favourites_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'product_controller.dart';
 
 class ProductView extends StatelessWidget {
   final ProductController controller = Get.put(ProductController());
@@ -35,7 +33,11 @@ class ProductView extends StatelessWidget {
                     itemBuilder: (context, index) {
                       var product = controller.productlist[index];
                       return Obx(
-                        () => ListTile(
+                        (){
+                     bool isFavorite = controller.favorites
+                              .any((favProduct) => favProduct.id == product.id);
+                      print(isFavorite);
+                          return ListTile(
                           title: Text(
                             product.title,
                             maxLines: 1, // Set the maximum number of lines
@@ -52,15 +54,11 @@ class ProductView extends StatelessWidget {
                               controller.toggleFavorite(product);
                             },
                             icon: Icon(
-                              controller.favorites.contains(product)
-                                  ? Icons.favorite
-                                  : Icons.favorite_border,
-                              color: controller.favorites.contains(product)
-                                  ? Colors.red
-                                  : null,
+                              isFavorite ? Icons.favorite : Icons.favorite_border,
+                                color: isFavorite ? Colors.red : null,
                             ),
                           ),
-                        ),
+                        );}
                       );
                     },
                     separatorBuilder: (BuildContext context, int index) {

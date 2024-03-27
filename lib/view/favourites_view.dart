@@ -1,6 +1,6 @@
+import 'package:asdfg/control/product_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'product_controller.dart';
 
 class FavoritesView extends StatelessWidget {
   final ProductController controller = Get.find<ProductController>();
