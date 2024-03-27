@@ -1,4 +1,4 @@
-import 'package:asdfg/screens/carousel_view.dart';
+import 'package:asdfg/screens/product_list_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
