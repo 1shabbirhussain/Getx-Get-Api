@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:asdfg/api_client/api-service.dart';
-import 'package:asdfg/model/product_model.dart';
+import 'package:asdfg/models/product_model.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 

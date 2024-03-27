@@ -1,5 +1,5 @@
-import 'package:asdfg/control/product_controller.dart';
-import 'package:asdfg/view/favourites_view.dart';
+import 'package:asdfg/controllers/product_controller.dart';
+import 'package:asdfg/views/favourites_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

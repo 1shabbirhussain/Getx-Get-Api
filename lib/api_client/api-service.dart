@@ -1,4 +1,4 @@
-import 'package:asdfg/model/product_model.dart';
+import 'package:asdfg/models/product_model.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 

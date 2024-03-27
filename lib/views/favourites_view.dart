@@ -1,4 +1,4 @@
-import 'package:asdfg/control/product_controller.dart';
+import 'package:asdfg/controllers/product_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
